@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_simulate_anr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="模拟 ANR(连续不停点击)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_simulate_crash"
+        android:layout_marginTop="120dp"/>
+
+    <Button
+        android:id="@+id/button_simulate_crash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="模拟 Crash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_simulate_anr"
+        app:layout_constraintBottom_toTopOf="@+id/button_simulate_lag"
+        android:layout_marginTop="36dp"/>
+
+    <Button
+        android:id="@+id/button_simulate_lag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="模拟卡顿"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_simulate_crash"
+        android:layout_marginTop="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
